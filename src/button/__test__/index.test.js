@@ -4,14 +4,14 @@ const { toMatchDiffSnapshot } = require('snapshot-diff');
 import Button from '../index'
 
 describe('Button', () => {
-    it('adf', () => {
-        const { container, debug, getByTestId, asFragment } = render(<Button />)
-        // console.log(debug())
-        const btnToggle = getByTestId('btn-toggle')
-        const content = getByTestId('content')
-
-        fireEvent.click(btnToggle)
-        expect(content.textContent).toBe('clicked')
+    it('snapshot', () => {
+        const initialProps = {
+            data: {
+                name: 'Richard'
+            }
+        }
+        const { container, debug, getByTestId, asFragment } = render(<Button {...initialProps} />)
+        expect(container.firstChild).toMatchSnapshot();
 
     })
 })

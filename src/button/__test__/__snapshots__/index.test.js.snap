@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button adf 1`] = `
+<div
+  data-testid="component-button"
+>
+  <div>
+    <button
+      data-testid="btn-toggle"
+    >
+      修改
+    </button>
+    <span>
+      Richard
+    </span>
+  </div>
+</div>
+`;

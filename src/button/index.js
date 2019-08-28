@@ -24,7 +24,7 @@ const Button = (props) => {
         })
     }
     return (
-        <div>
+        <div data-testid="component-button">
             {toggle ?
                 <div>
                     <input type="text" name="name" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
