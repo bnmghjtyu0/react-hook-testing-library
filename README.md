@@ -15,7 +15,7 @@
 ```jsx
 // index.js
 
-<button data-testid="toggle">按鈕</button>
+<button data-testid="btn-toggle">按鈕</button>
 ```
 
 ```jsx
