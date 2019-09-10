@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from '../button'
-const Home = () => {
+const Home = ({ history }) => {
+    useEffect(() => {
+        history.push({
+            pathname: '/',
+            search: '?city=Taichung'
+        })
+    }, [])
     return (
-        <Button />
+        <div>
+            <Button />
+        </div>
     )
 }
 export default Home
