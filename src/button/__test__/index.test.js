@@ -21,13 +21,17 @@ function renderWithRouter(
 }
 describe('Button', () => {
     it('adf', () => {
-        const { container, debug, getByTestId, asFragment } = renderWithRouter(<Button />)
+        const { container, debug, getByTestId, asFragment } = renderWithRouter(<Button />, {
+
+            route: '/?city=city02'
+        })
         // console.log(debug())
         const btnToggle = getByTestId('btn-toggle')
         const content = getByTestId('content')
 
         fireEvent.click(btnToggle)
         expect(content.textContent).toBe('clicked')
+        debug()
 
     })
 })
