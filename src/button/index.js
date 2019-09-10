@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-const Button = () => {
+import {withRouter} from 'react-router-dom'
+const Button = ({history}) => {
     const [isClick, setIsClick] = useState(false)
     const toggle = () => {
         setIsClick(!isClick)
     }
+    console.log(history)
     return (
         <div>
             <button data-testid="btn-toggle" onClick={toggle}>按鈕</button>
@@ -12,4 +14,4 @@ const Button = () => {
     )
 }
 
-export default Button
+export default withRouter(Button)

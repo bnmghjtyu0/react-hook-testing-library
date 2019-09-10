@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Button from './button/index'
-
+import {Route} from 'react-router-dom'
+import Home from './home'
 function App() {
     return (
         <div className="App">
-            <Button />
+        <Route exact to="/" component={Home}/>
+
         </div>
     );
 }
