@@ -6,7 +6,6 @@ const Button = ({ history }) => {
         setIsClick(!isClick)
     }
     const params = new URLSearchParams(history.location.search)
-    console.log()
     return (
         <div>
             <h4 className="title">{params.get('city')}</h4>
