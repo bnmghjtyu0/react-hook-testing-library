@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 const Button = () => {
     const [isClick, setIsClick] = useState(false)
-    const toggle = () => {
-        setIsClick(!isClick)
-    }
+
     return (
         <div>
-            <button data-testid="btn-toggle" onClick={toggle}>按鈕</button>
-            <div data-testid="content">{isClick ? 'clicked' : 'unclick'}</div>
+            <button data-testid="toggle">按鈕</button>
+            <button data-testid="toggle">按鈕</button>
+            <label>my aria label</label>
         </div>
     )
 }

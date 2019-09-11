@@ -4,14 +4,11 @@ const { toMatchDiffSnapshot } = require('snapshot-diff');
 import Button from '../index'
 
 describe('Button', () => {
-    it('adf', () => {
-        const { container, debug, getByTestId, asFragment } = render(<Button />)
+    it('text', () => {
+        const { container, debug, getByTestId, queryAllByText, getAllByText } = render(<Button />)
         // console.log(debug())
-        const btnToggle = getByTestId('btn-toggle')
-        const content = getByTestId('content')
-
-        fireEvent.click(btnToggle)
-        expect(content.textContent).toBe('clicked')
-
+        // 只能取得一個元素
+        // 如果太多會出現 Found multiple elements by: [data-testid="toggle"]
+        expect(queryAllByText('按鈕')).toHaveLength(1)
     })
 })
