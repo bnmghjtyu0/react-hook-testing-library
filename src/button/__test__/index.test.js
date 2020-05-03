@@ -1,19 +1,19 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-const { toMatchDiffSnapshot } = require("snapshot-diff");
 import Button from "../index";
+// const { toMatchDiffSnapshot } = require("snapshot-diff");
 
-describe('Button', () => {
-    it('adf', () => {
-        const { container, debug, getByTestId, asFragment } = render(<Button />)
-        // console.log(debug())
-        const btnToggle = getByTestId('btn-toggle')
-        const btnSendData = getByTestId('sendData')
-        const content = getByTestId('content')
-        // fireEvent.click(domNode)
-        // fireEvent.click(btnToggle)
-        fireEvent.click(btnSendData)
-        // expect(content.textContent).toBe('clicked')
+describe("測試組件 Button", () => {
+  it("登入登出", () => {
+    const { container, debug, getByTestId, asFragment } = render(<Button />);
+    debug(); // This method is a shortcut for console.log(prettyDOM(element))
+    const btnLogin = getByTestId("btn-login");
+    const btnLogout = getByTestId("btn-logout");
+    const content = getByTestId("content");
 
-    })
-})
+    fireEvent.click(btnLogin);
+    expect(content.textContent).toBe("登入中");
+    fireEvent.click(btnLogout);
+    expect(content.textContent).toBe("未登入");
+  });
+});
