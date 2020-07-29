@@ -1,14 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Button from './button/index'
+import React from 'react'
+import './App.css'
+import FavoriteNumber from './FavoriteNumber'
 
 function App() {
-    return (
-        <div className="App">
-            <Button />
-        </div>
-    );
+  return (
+    <div className="App">
+      <FavoriteNumber />
+    </div>
+  )
 }
 
-export default App;
+export default App
